@@ -125,3 +125,10 @@ test('GitHub filenames match published URLs and preserve binary hashes', () => {
   assert.equal(result.files[0].sha512,'unchanged');
   assert.throws(()=>githubAssetName('a#b.exe'));
 });
+
+test('archived repositories preserve a published bridge without attempting writes',async()=>{
+ const gh={api:async()=>({archived:true}),optional:async()=>({tag_name:'v3.43.31',body:'Desktop update bridge for Sonoran CAD.'})};
+ await mirrorLegacy(gh,'cad','windows','3.43.32',[],'.','');
+ gh.optional=async()=>({body:'ordinary release'});
+ await assert.rejects(mirrorLegacy(gh,'cad','windows','3.43.32',[],'.',''),/no published migration bridge/);
+});
