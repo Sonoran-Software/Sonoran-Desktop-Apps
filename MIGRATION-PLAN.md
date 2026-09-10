@@ -39,6 +39,9 @@ refuses to overwrite a different existing artifact; use a new source/version.
    Old clients receive the bridge installer, which embeds the new generic feed.
    Studio's legacy release stays a draft until BOTH Windows and macOS are complete.
 6. Keep old repositories public and their bridge releases available indefinitely.
+   After verifying the bridge on Windows/macOS and deploying the updated publisher,
+   they may be archived. Publishing preserves an archived repository with a migration
+   bridge instead of trying to write another release. Never delete or privatize it.
    Existing installations switch feeds after installing and restarting the bridge.
    New downloads embed the new feed immediately. No reinstall is normally required.
 
