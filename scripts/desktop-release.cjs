@@ -113,7 +113,7 @@ function run(program, args, options = {}) {
   if (result.error || result.status !== 0) throw new Error(`${program} failed: ${result.error?.message || result.stderr || result.status}`);
   return result.stdout;
 }
-function signLinux(product, directory, metadataText) {
+function signLinux(product, directory, metadataText, publishedNames = true) {
   const fp = process.env.LINUX_GPG_FINGERPRINT?.trim().toUpperCase();
   if (fp !== PRODUCTS[product].signing) throw new Error('Linux signing fingerprint does not match the product signing key');
   const privateKey = process.env.LINUX_GPG_PRIVATE_KEY, passphrase = process.env.LINUX_GPG_PASSPHRASE;
@@ -131,7 +131,7 @@ function signLinux(product, directory, metadataText) {
     fs.writeFileSync(path.join(directory, META.linux), metadataText);
     const images = fs.readdirSync(directory).filter(name => name.endsWith('.AppImage'));
     if (images.length !== 1) throw new Error('Expected exactly one AppImage');
-    const sums = [...images, META.linux].map(name => `${hash(fs.readFileSync(path.join(directory, name)))}  ${githubAssetName(name)}\n`).join('');
+    const sums = [...images, META.linux].map(name => `${hash(fs.readFileSync(path.join(directory, name)))}  ${publishedNames ? githubAssetName(name) : name}\n`).join('');
     fs.writeFileSync(path.join(directory, 'SHA256SUMS-linux'), sums);
     for (const name of ['SHA256SUMS-linux', META.linux]) {
       const signature = path.join(directory, `${name}.asc`), data = path.join(directory, name);
@@ -357,7 +357,7 @@ async function publish(gh, product, platform, directory, packageFile, preview = 
   validateMetadata(original, directory, version);
   verifyPackagedFeed(product, platform, directory);
   const normalized = yaml.dump(centralMetadata(original, product, version), { lineWidth: -1 });
-  if (platform === 'linux') signLinux(product, directory, normalized);
+  if (platform === 'linux') signLinux(product, directory, normalized, !preview);
   const extensions = { windows: /\.(exe|blockmap)$/, macos: /\.(dmg|zip|blockmap)$/, linux: /\.(AppImage|blockmap)$/ }[platform];
   const names = fs.readdirSync(directory).filter(name => extensions.test(name) && fs.statSync(path.join(directory, name)).isFile());
   if (names.length === 0) throw new Error('No publishable artifacts');
