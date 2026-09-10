@@ -11,6 +11,12 @@
       "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran%20CAD-universal.dmg",
       "central": true,
       "metadataSha256": "f5f6814e1aeb75fe466bddb5f58d6246ae961e6e9f8dfda84a4382147f9c5fd9"
+    },
+    "linux": {
+      "version": "3.43.31",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran%20CAD-3.43.31-x86_64.AppImage",
+      "central": true,
+      "metadataSha256": "9bf30f1cec9fc344890715f799b2c68972bbdcdb61bf19bb9cac4290d9e1695f"
     }
   },
   "cms": {
