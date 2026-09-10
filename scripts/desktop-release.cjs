@@ -59,6 +59,14 @@ function centralMetadata(original, product, version) {
   if (result.packages) throw new Error('Unexpected web-installer package metadata');
   return result;
 }
+function localLinuxMetadata(original, product, version) {
+  const result = structuredClone(original);
+  const prefix = releaseAssetUrl(`${product}-v${version}`, '');
+  const local = value => assetName(value.startsWith(prefix) ? value.slice(prefix.length) : value);
+  for (const file of result.files) file.url = local(file.url);
+  if (result.path) result.path = local(result.path);
+  return result;
+}
 function verifyPackagedFeed(product, platform, directory) {
   const expected = `${FEEDS}/updates/${product}/${platform}/`;
   const candidates = [];
@@ -71,6 +79,8 @@ function verifyPackagedFeed(product, platform, directory) {
     }
   }
   visit(directory, 0);
+  const extractedLinux = path.join(directory, 'squashfs-root/resources/app-update.yml');
+  if (!candidates.length && platform === 'linux' && fs.existsSync(extractedLinux)) candidates.push(extractedLinux);
   if (!candidates.length) throw new Error('Packaged app-update.yml was not found');
   for (const file of candidates) {
     const config = yaml.load(fs.readFileSync(file, 'utf8'));
@@ -116,8 +126,12 @@ function signLinux(product, directory, metadataText) {
     const sums = [...images, META.linux].map(name => `${hash(fs.readFileSync(path.join(directory, name)))}  ${name}\n`).join('');
     fs.writeFileSync(path.join(directory, 'SHA256SUMS-linux'), sums);
     for (const name of ['SHA256SUMS-linux', META.linux]) {
-      gpg(['--pinentry-mode', 'loopback', '--passphrase-file', passFile, '--local-user', `${fp}!`, '--armor', '--detach-sign', '--output', path.join(directory, `${name}.asc`), path.join(directory, name)]);
-      gpg(['--verify', path.join(directory, `${name}.asc`), path.join(directory, name)]);
+      const signature = path.join(directory, `${name}.asc`), data = path.join(directory, name);
+      const verify = () => gpg(['--status-fd', '1', '--verify', signature, data]).includes(`[GNUPG:] VALIDSIG ${fp} `);
+      let valid = false;
+      if (fs.existsSync(signature)) { try { valid = verify(); } catch { /* Re-sign changed files. */ } }
+      if (!valid) gpg(['--pinentry-mode', 'loopback', '--passphrase-file', passFile, '--local-user', `${fp}!`, '--armor', '--detach-sign', '--output', signature, data]);
+      if (!verify()) throw new Error('Linux signature did not match the expected signing subkey');
     }
     gpg(['--armor', '--output', path.join(directory, `sonoran-${product}-linux-public.asc`), '--export', fp]);
   } finally {
@@ -317,7 +331,10 @@ async function waitForFeed(product, platform, expected, fetcher = fetch) {
 async function publish(gh, product, platform, directory, packageFile, preview = false) {
   const version = JSON.parse(fs.readFileSync(packageFile, 'utf8')).version;
   const metaName = META[platform], raw = fs.readFileSync(path.join(directory, metaName), 'utf8');
-  const original = yaml.load(raw);
+  const parsed = yaml.load(raw);
+  // Linux artifact bundles contain the final signed manifest. Accept only this
+  // product/version's immutable hub URLs when recovering the same artifact set.
+  const original = platform === 'linux' ? localLinuxMetadata(parsed, product, version) : parsed;
   validateMetadata(original, directory, version);
   verifyPackagedFeed(product, platform, directory);
   const normalized = yaml.dump(centralMetadata(original, product, version), { lineWidth: -1 });
@@ -369,5 +386,5 @@ async function main(args) {
     await publish(gh, product, platform, path.resolve(directory), path.resolve(packageFile));
   } else throw new Error('Unknown publisher command');
 }
-module.exports = { PRODUCTS, HUB, FEEDS, META, GitHub, compareVersions, assetName, validateMetadata, centralMetadata, renderReadme, checkVersion, prepareStudio, commitFeed, waitForFeed, publish, signLinux, mirrorLegacy, verifyPackagedFeed };
+module.exports = { PRODUCTS, HUB, FEEDS, META, GitHub, compareVersions, assetName, validateMetadata, centralMetadata, renderReadme, checkVersion, prepareStudio, commitFeed, waitForFeed, publish, signLinux, mirrorLegacy, verifyPackagedFeed, localLinuxMetadata };
 if (require.main === module) main(process.argv.slice(2)).catch(error => { console.error(error.message); process.exitCode = 1; });

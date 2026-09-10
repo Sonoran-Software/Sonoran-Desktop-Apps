@@ -72,8 +72,10 @@ Never execute a mutable remote publishing script inside a build.
 
 A failed platform leaves its prior feed and download link available. Incomplete
 hub releases are not update feeds. If Pages deployment fails, fix Pages and retry
-publication using the SAME archived artifacts, or build a higher version.
-Rebuilding/re-signing can change bytes; do not bypass the digest guard.
+publication using the SAME artifacts and unpacked application (needed to verify
+the embedded feed), or build a higher version. A recovered Linux AppImage can be
+extracted into `squashfs-root` in its artifact directory. Valid existing Linux
+signatures are reused. Rebuilding can change bytes; do not bypass the digest guard.
 
 Legacy publishing is serialized with temporary hub tags named
 `desktop-publish-lock-<legacy-repo>`. A normal failure releases the lock. If a build

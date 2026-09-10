@@ -32,6 +32,14 @@ test('central manifests isolate product releases without changing hashes',t=>{
   assert.equal(metadata.path,'App.exe');
   assert.equal(compareVersions('1.2.10','1.2.9'),1);
 });
+test('Linux recovery accepts only its own immutable release URLs',t=>{
+  const {metadata}=fixture(t);
+  const {localLinuxMetadata}=require('../scripts/desktop-release.cjs');
+  const final=centralMetadata(metadata,'cms','1.2.3');
+  assert.deepEqual(localLinuxMetadata(final,'cms','1.2.3'),metadata);
+  assert.throws(()=>localLinuxMetadata(final,'cad','1.2.3'));
+  assert.throws(()=>localLinuxMetadata(final,'cms','1.2.4'));
+});
 test('staging verifies artifacts without network writes',async t=>{
   const {dir}=fixture(t);
   fs.mkdirSync(path.join(dir,'win-unpacked/resources'),{recursive:true});
