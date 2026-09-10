@@ -26,9 +26,10 @@
       "central": false
     },
     "macos": {
-      "version": "1.5.16",
-      "url": "https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-universal.dmg",
-      "central": false
+      "version": "1.5.18",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS-universal.dmg",
+      "central": true,
+      "metadataSha256": "d0b9a3126c488941e64a4d6f84df97ed78a48da8f26872cc3bcc1ef86de541f6"
     }
   },
   "radio": {
