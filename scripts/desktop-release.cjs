@@ -59,6 +59,24 @@ function centralMetadata(original, product, version) {
   if (result.packages) throw new Error('Unexpected web-installer package metadata');
   return result;
 }
+function verifyPackagedFeed(product, platform, directory) {
+  const expected = `${FEEDS}/updates/${product}/${platform}/`;
+  const candidates = [];
+  function visit(folder, depth) {
+    if (depth > 5) return;
+    for (const entry of fs.readdirSync(folder, { withFileTypes: true })) {
+      const file = path.join(folder, entry.name);
+      if (entry.isFile() && entry.name === 'app-update.yml') candidates.push(file);
+      else if (entry.isDirectory() && !['squashfs-root', 'app.asar.unpacked', 'node_modules'].includes(entry.name)) visit(file, depth + 1);
+    }
+  }
+  visit(directory, 0);
+  if (!candidates.length) throw new Error('Packaged app-update.yml was not found');
+  for (const file of candidates) {
+    const config = yaml.load(fs.readFileSync(file, 'utf8'));
+    if (config.provider !== 'generic' || config.url !== expected || config.useMultipleRangeRequest !== false) throw new Error(`Packaged update destination is incorrect: ${file}`);
+  }
+}
 function renderReadme(catalog) {
   const lines = ['# Sonoran Desktop Apps', '', 'Download the latest desktop apps from Sonoran Software.', ''];
   for (const [product, info] of Object.entries(PRODUCTS)) {
@@ -301,6 +319,7 @@ async function publish(gh, product, platform, directory, packageFile, preview = 
   const metaName = META[platform], raw = fs.readFileSync(path.join(directory, metaName), 'utf8');
   const original = yaml.load(raw);
   validateMetadata(original, directory, version);
+  verifyPackagedFeed(product, platform, directory);
   const normalized = yaml.dump(centralMetadata(original, product, version), { lineWidth: -1 });
   if (platform === 'linux') signLinux(product, directory, normalized);
   const extensions = { windows: /\.(exe|blockmap)$/, macos: /\.(dmg|zip|blockmap)$/, linux: /\.(AppImage|blockmap)$/ }[platform];
@@ -350,5 +369,5 @@ async function main(args) {
     await publish(gh, product, platform, path.resolve(directory), path.resolve(packageFile));
   } else throw new Error('Unknown publisher command');
 }
-module.exports = { PRODUCTS, HUB, FEEDS, META, GitHub, compareVersions, assetName, validateMetadata, centralMetadata, renderReadme, checkVersion, prepareStudio, commitFeed, waitForFeed, publish, signLinux, mirrorLegacy };
+module.exports = { PRODUCTS, HUB, FEEDS, META, GitHub, compareVersions, assetName, validateMetadata, centralMetadata, renderReadme, checkVersion, prepareStudio, commitFeed, waitForFeed, publish, signLinux, mirrorLegacy, verifyPackagedFeed };
 if (require.main === module) main(process.argv.slice(2)).catch(error => { console.error(error.message); process.exitCode = 1; });

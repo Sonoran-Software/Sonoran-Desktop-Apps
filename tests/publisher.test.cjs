@@ -34,7 +34,11 @@ test('central manifests isolate product releases without changing hashes',t=>{
 });
 test('staging verifies artifacts without network writes',async t=>{
   const {dir}=fixture(t);
+  fs.mkdirSync(path.join(dir,'win-unpacked/resources'),{recursive:true});
+  fs.writeFileSync(path.join(dir,'win-unpacked/resources/app-update.yml'),JSON.stringify({provider:'generic',url:'https://sonoran-software.github.io/Sonoran-Desktop-Apps/updates/cms/windows/',useMultipleRangeRequest:false}));
   await publish(null,'cms','windows',dir,path.join(dir,'package.json'),true);
+  fs.writeFileSync(path.join(dir,'win-unpacked/resources/app-update.yml'),JSON.stringify({provider:'github',repo:'old'}));
+  await assert.rejects(publish(null,'cms','windows',dir,path.join(dir,'package.json'),true),/destination is incorrect/);
 });
 test('migration requires a higher version and permits same-version bridge recovery',async()=>{
   let latest={tag_name:'v1.2.3',body:''};
