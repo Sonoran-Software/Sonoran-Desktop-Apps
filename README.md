@@ -22,7 +22,7 @@ Download the latest desktop apps from Sonoran Software.
 
 ## Sonoran Studio
 
-- [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.105/Sonoran-Studio-Windows.exe) — 0.1.105
+- [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-Windows.exe) — 0.1.106
 - [macOS](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-macOS.dmg) — 0.1.106
 - [Linux (AppImage, x64)](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-0.1.106-x86_64.AppImage) — 0.1.106
 
