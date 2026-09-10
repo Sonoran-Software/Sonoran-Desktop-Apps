@@ -45,6 +45,12 @@
       "version": "0.1.104",
       "url": "https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-macOS.dmg",
       "central": false
+    },
+    "linux": {
+      "version": "0.1.105",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.105/Sonoran-Studio-0.1.105-x86_64.AppImage",
+      "central": true,
+      "metadataSha256": "4d7cf7f621aefbfd349d34d96fe22f07a008378bbdb9c4c3d4a37b4be4635b9b"
     }
   }
 }
