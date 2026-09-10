@@ -1,8 +1,8 @@
-version: 2.27.18
+version: 2.28.0
 files:
-  - url: https://github.com/Sonoran-Software/SonoranRadio_Windows/releases/download/v2.27.18/Sonoran-Radio_Setup.exe
-    sha512: 9mA8DJL8OXMRImcOGlD4XcGvnMxFzqsp9B8jI/GiIS2psZCUW1xLMZ00uEh72ApFS7COHKmXbphe54BwjUCG4g==
-    size: 249695560
-path: https://github.com/Sonoran-Software/SonoranRadio_Windows/releases/download/v2.27.18/Sonoran-Radio_Setup.exe
-sha512: 9mA8DJL8OXMRImcOGlD4XcGvnMxFzqsp9B8jI/GiIS2psZCUW1xLMZ00uEh72ApFS7COHKmXbphe54BwjUCG4g==
-releaseDate: '2026-08-20T00:05:05.132Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.0/Sonoran-Radio_Setup.exe
+    sha512: FHNFsz6IRT2z7adhsTZdK6YVhN3NpD47ae15sYeoj3yJFK0UpSHI3wRvPuMsW15PueQnDbq9WxnX8UvJexdU2g==
+    size: 252400736
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.0/Sonoran-Radio_Setup.exe
+sha512: FHNFsz6IRT2z7adhsTZdK6YVhN3NpD47ae15sYeoj3yJFK0UpSHI3wRvPuMsW15PueQnDbq9WxnX8UvJexdU2g==
+releaseDate: '2026-09-10T22:48:50.807Z'
