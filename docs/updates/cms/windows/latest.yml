@@ -1,8 +1,8 @@
-version: 1.5.16
+version: 1.5.18
 files:
-  - url: https://github.com/Sonoran-Software/SonoranCMS_Windows/releases/download/v1.5.16/Sonoran-CMS.exe
-    sha512: Nut478zPEgpPF9zqGp7/nDl6j29QSM1kCFRGbN4jGLq7Fz/zv4JzC67VhG0Xs3JfKOhyfuxv8S0ZM1gGGZoXgA==
-    size: 189467304
-path: https://github.com/Sonoran-Software/SonoranCMS_Windows/releases/download/v1.5.16/Sonoran-CMS.exe
-sha512: Nut478zPEgpPF9zqGp7/nDl6j29QSM1kCFRGbN4jGLq7Fz/zv4JzC67VhG0Xs3JfKOhyfuxv8S0ZM1gGGZoXgA==
-releaseDate: '2026-09-08T23:51:20.730Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS.exe
+    sha512: lzepd9GWFFpyLhXQs4OW9lQ1BWGSeCpGtvQyzqDWunopAuzii5j/5VCFT+cJ8gi7wHr5TnwIJj6KjJDma4xCYw==
+    size: 189463776
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS.exe
+sha512: lzepd9GWFFpyLhXQs4OW9lQ1BWGSeCpGtvQyzqDWunopAuzii5j/5VCFT+cJ8gi7wHr5TnwIJj6KjJDma4xCYw==
+releaseDate: '2026-09-10T21:52:08.790Z'
