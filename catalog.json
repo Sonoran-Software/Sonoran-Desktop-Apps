@@ -31,6 +31,12 @@
       "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran.CMS-universal.dmg",
       "central": true,
       "metadataSha256": "708a463010fcdc84eb213c558c6f568fa290e1016899ce66b03b6cfb6b53fa54"
+    },
+    "linux": {
+      "version": "1.5.18",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS-1.5.18-x86_64.AppImage",
+      "central": true,
+      "metadataSha256": "fb41cf43d0704d6b8b1a4105cfa0c0918f4f945e26a7404ab1cc7ef8de0190ce"
     }
   },
   "radio": {
