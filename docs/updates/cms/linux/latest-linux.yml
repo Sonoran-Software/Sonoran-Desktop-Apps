@@ -1,9 +1,9 @@
 version: 1.5.18
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS-1.5.18-x86_64.AppImage
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran.CMS-1.5.18-x86_64.AppImage
     sha512: ZB2iP6KNA9NHYYhr6ckNcaW/fTIIbBLMtNSxLXcf4Iw+52obDic7PqvWIp6kj2IlQma9kgGXBuSdElH054QfJA==
     size: 280673831
     blockMapSize: 294459
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS-1.5.18-x86_64.AppImage
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran.CMS-1.5.18-x86_64.AppImage
 sha512: ZB2iP6KNA9NHYYhr6ckNcaW/fTIIbBLMtNSxLXcf4Iw+52obDic7PqvWIp6kj2IlQma9kgGXBuSdElH054QfJA==
 releaseDate: '2026-09-10T21:59:36.952Z'
