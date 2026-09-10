@@ -57,10 +57,10 @@
       "metadataSha256": "0eed785d5a189b353f1b329b1cb0c693af24a109d26a7a2dd99da3947f1c0423"
     },
     "linux": {
-      "version": "0.1.105",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.105/Sonoran-Studio-0.1.105-x86_64.AppImage",
+      "version": "0.1.106",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-0.1.106-x86_64.AppImage",
       "central": true,
-      "metadataSha256": "4d7cf7f621aefbfd349d34d96fe22f07a008378bbdb9c4c3d4a37b4be4635b9b"
+      "metadataSha256": "3e5cb255ea37599f0b899006567d19a5188e5f38e37d7ad19d768b0781b70be9"
     }
   }
 }
