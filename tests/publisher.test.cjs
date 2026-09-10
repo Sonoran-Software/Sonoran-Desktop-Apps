@@ -70,7 +70,7 @@ test('Studio shares one source version above legacy high-water mark',async t=>{
 });
 test('asset upload checks server digests and never replaces different bytes',async()=>{
   const bytes=Buffer.from('artifact');
-  const gh=new GitHub('test-only',async()=>({ok:true,json:async()=>({size:bytes.length,digest:`sha256:${sha(bytes)}`})}));
+  const gh=new GitHub('test-only',async()=>({ok:true,json:async()=>({name:'app.exe',size:bytes.length,digest:`sha256:${sha(bytes)}`})}));
   gh.api=async()=>[];
   await gh.upload(HUB,{id:1},'app.exe',bytes);
   gh.api=async()=>[{name:'app.exe',digest:'sha256:different'}];
@@ -104,9 +104,9 @@ test('Studio legacy bridge stays draft until both platform manifests exist',asyn
     if(route.includes('/assets?')) return assets;
     return {default_branch:'master'};
   }};
-  await mirrorLegacy(gh,'studio','windows','0.1.105',['App.exe'],dir,'windows');
+  await mirrorLegacy(gh,'studio','windows','0.1.105',['App.exe'],dir,JSON.stringify({files:[]}));
   assert.equal(release.draft,true);assert.equal(published,0);
-  await mirrorLegacy(gh,'studio','macos','0.1.105',[],dir,'mac');
+  await mirrorLegacy(gh,'studio','macos','0.1.105',[],dir,JSON.stringify({files:[]}));
   assert.equal(published,1);
 });
 test('legacy lock is released when publishing fails',async()=>{
@@ -114,4 +114,14 @@ test('legacy lock is released when publishing fails',async()=>{
   gh.api=async(route,method)=>{calls.push(method);return {object:{sha:'head'}};};
   await assert.rejects(gh.locked('test',async()=>{throw new Error('upload failed');}),/upload failed/);
   assert.deepEqual(calls,[undefined,'POST','DELETE']);
+});
+
+test('GitHub filenames match published URLs and preserve binary hashes', () => {
+  const {githubAssetName} = require('../scripts/desktop-release.cjs');
+  assert.equal(githubAssetName('Sonoran CAD.exe'), 'Sonoran.CAD.exe');
+  const original = {files:[{url:'Sonoran CAD.exe',sha512:'unchanged'}],path:'Sonoran CAD.exe'};
+  const result = centralMetadata(original,'cad','3.43.31');
+  assert.ok(result.files[0].url.endsWith('/Sonoran.CAD.exe'));
+  assert.equal(result.files[0].sha512,'unchanged');
+  assert.throws(()=>githubAssetName('a#b.exe'));
 });

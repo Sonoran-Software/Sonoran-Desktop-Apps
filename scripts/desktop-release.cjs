@@ -35,8 +35,13 @@ function assetName(value) {
   if (name !== path.basename(name) || /[/\\]/.test(name) || name === '.' || name === '..') throw new Error(`Expected a local artifact filename: ${value}`);
   return name;
 }
+function githubAssetName(name) {
+  const safe = assetName(name).replace(/ /g, '.');
+  if (!/^[A-Za-z0-9_-][A-Za-z0-9._-]*$/.test(safe)) throw new Error(`Unsupported release filename: ${name}`);
+  return safe;
+}
 function releaseAssetUrl(tag, name) {
-  return `https://github.com/${HUB}/releases/download/${encodeURIComponent(tag)}/${encodeURIComponent(name)}`;
+  return `https://github.com/${HUB}/releases/download/${encodeURIComponent(tag)}/${encodeURIComponent(name ? githubAssetName(name) : '')}`;
 }
 function validateMetadata(metadata, directory, expectedVersion) {
   if (metadata.version !== expectedVersion) throw new Error('Artifact version does not match package.json');
@@ -59,10 +64,13 @@ function centralMetadata(original, product, version) {
   if (result.packages) throw new Error('Unexpected web-installer package metadata');
   return result;
 }
-function localLinuxMetadata(original, product, version) {
+function localLinuxMetadata(original, product, version, directory) {
   const result = structuredClone(original);
   const prefix = releaseAssetUrl(`${product}-v${version}`, '');
-  const local = value => assetName(value.startsWith(prefix) ? value.slice(prefix.length) : value);
+  const local = value => {
+    const name = assetName(value.startsWith(prefix) ? value.slice(prefix.length) : value);
+    return directory ? fs.readdirSync(directory).find(file => githubAssetName(file) === githubAssetName(name)) || name : name;
+  };
   for (const file of result.files) file.url = local(file.url);
   if (result.path) result.path = local(result.path);
   return result;
@@ -123,7 +131,7 @@ function signLinux(product, directory, metadataText) {
     fs.writeFileSync(path.join(directory, META.linux), metadataText);
     const images = fs.readdirSync(directory).filter(name => name.endsWith('.AppImage'));
     if (images.length !== 1) throw new Error('Expected exactly one AppImage');
-    const sums = [...images, META.linux].map(name => `${hash(fs.readFileSync(path.join(directory, name)))}  ${name}\n`).join('');
+    const sums = [...images, META.linux].map(name => `${hash(fs.readFileSync(path.join(directory, name)))}  ${githubAssetName(name)}\n`).join('');
     fs.writeFileSync(path.join(directory, 'SHA256SUMS-linux'), sums);
     for (const name of ['SHA256SUMS-linux', META.linux]) {
       const signature = path.join(directory, `${name}.asc`), data = path.join(directory, name);
@@ -187,6 +195,7 @@ class GitHub {
     }
   }
   async upload(repo, release, name, bytes) {
+    name = githubAssetName(name);
     const digest = `sha256:${hash(bytes)}`;
     let current = await this.api(`repos/${repo}/releases/${release.id}/assets?per_page=100`);
     const existing = current.find(asset => asset.name === name);
@@ -199,7 +208,7 @@ class GitHub {
     });
     if (!response.ok) throw new Error(`Artifact upload failed for ${name}: ${response.status}`);
     const asset = await response.json();
-    if (asset.digest !== digest || asset.size !== bytes.length) throw new Error(`GitHub artifact digest/size verification failed: ${name}`);
+    if (asset.name !== name || asset.digest !== digest || asset.size !== bytes.length) throw new Error(`GitHub artifact digest/size verification failed: ${name}`);
     return asset;
   }
   async locked(name, task) {
@@ -222,6 +231,13 @@ class GitHub {
 
 async function mirrorLegacy(gh, product, platform, version, names, directory, raw) {
   const repo = `Sonoran-Software/${PRODUCTS[product].legacy[platform]}`;
+  const repository = await gh.api(`repos/${repo}`);
+  if (repository.archived) {
+    const bridge = await gh.optional(`repos/${repo}/releases/latest`);
+    if (!bridge?.body?.includes(`Desktop update bridge for ${PRODUCTS[product].name}.`)) throw new Error('Archived repository has no published migration bridge');
+    console.log(`Preserving archived ${repo} migration bridge ${bridge.tag_name}.`);
+    return;
+  }
   return gh.locked(PRODUCTS[product].legacy[platform], async () => {
     const latest = await gh.optional(`repos/${repo}/releases/latest`);
     if (latest && compareVersions(version, latest.tag_name.replace(/^v/, '')) < 0) throw new Error('A newer legacy bridge is already published');
@@ -238,7 +254,10 @@ async function mirrorLegacy(gh, product, platform, version, names, directory, ra
       });
     }
     for (const name of names) await gh.upload(repo, release, name, fs.readFileSync(path.join(directory, name)));
-    await gh.upload(repo, release, META[platform], Buffer.from(raw));
+    const metadata = yaml.load(raw);
+    for (const file of metadata.files) file.url = githubAssetName(file.url);
+    if (metadata.path) metadata.path = githubAssetName(metadata.path);
+    await gh.upload(repo, release, META[platform], Buffer.from(yaml.dump(metadata, { lineWidth: -1 })));
     const assets = await gh.api(`repos/${repo}/releases/${release.id}/assets?per_page=100`);
     const required = product === 'studio' ? [META.windows, META.macos] : [META[platform]];
     if (!required.every(name => assets.some(asset => asset.name === name))) {
@@ -334,7 +353,7 @@ async function publish(gh, product, platform, directory, packageFile, preview = 
   const parsed = yaml.load(raw);
   // Linux artifact bundles contain the final signed manifest. Accept only this
   // product/version's immutable hub URLs when recovering the same artifact set.
-  const original = platform === 'linux' ? localLinuxMetadata(parsed, product, version) : parsed;
+  const original = platform === 'linux' ? localLinuxMetadata(parsed, product, version, directory) : parsed;
   validateMetadata(original, directory, version);
   verifyPackagedFeed(product, platform, directory);
   const normalized = yaml.dump(centralMetadata(original, product, version), { lineWidth: -1 });
@@ -386,5 +405,5 @@ async function main(args) {
     await publish(gh, product, platform, path.resolve(directory), path.resolve(packageFile));
   } else throw new Error('Unknown publisher command');
 }
-module.exports = { PRODUCTS, HUB, FEEDS, META, GitHub, compareVersions, assetName, validateMetadata, centralMetadata, renderReadme, checkVersion, prepareStudio, commitFeed, waitForFeed, publish, signLinux, mirrorLegacy, verifyPackagedFeed, localLinuxMetadata };
+module.exports = { githubAssetName, PRODUCTS, HUB, FEEDS, META, GitHub, compareVersions, assetName, validateMetadata, centralMetadata, renderReadme, checkVersion, prepareStudio, commitFeed, waitForFeed, publish, signLinux, mirrorLegacy, verifyPackagedFeed, localLinuxMetadata };
 if (require.main === module) main(process.argv.slice(2)).catch(error => { console.error(error.message); process.exitCode = 1; });

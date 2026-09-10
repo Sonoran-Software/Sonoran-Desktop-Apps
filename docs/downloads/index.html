@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Download Sonoran Desktop Apps</title>
+<style>body{font:18px/1.6 system-ui,sans-serif;max-width:760px;margin:4rem auto;padding:0 1.5rem;color:#182331}a{color:#175fa5}li{margin:.6rem 0}</style>
+<h1 id="title">Sonoran Desktop Apps</h1>
+<p id="status">Loading the latest available downloads…</p>
+<ul id="downloads"></ul>
+<p><a id="fallback" href="https://github.com/Sonoran-Software/Sonoran-Desktop-Apps">Browse all releases and downloads</a></p>
+<p><a href="../signing.html">Verify Linux downloads</a></p>
+<noscript>Enable JavaScript for automatic download selection, or use the download list above.</noscript>
+<script>
+const names = {cad:'Sonoran CAD',cms:'Sonoran CMS',radio:'Sonoran Radio',studio:'Sonoran Studio'};
+const platforms = {windows:'Windows',macos:'macOS',linux:'Linux (AppImage)'};
+const query = new URLSearchParams(location.search);
+const app = query.get('app');
+const platform = query.get('platform');
+const status = document.getElementById('status');
+if (Object.hasOwn(names, app)) {
+  document.getElementById('title').textContent = `Download ${names[app]}`;
+  document.title = `Download ${names[app]}`;
+  document.getElementById('fallback').href += `#sonoran-${app}`;
+}
+function safeUrl(value, product) {
+  const url = new URL(value);
+  const legacy = {cad:['SonoranCAD_Windows','SonoranCAD_MacOS'],cms:['SonoranCMS_Windows','SonoranCMS_MacOS'],radio:['SonoranRadio_Windows','SonoranRadio_MacOS'],studio:['Sonoran-Studio-Releases']};
+  const prefix = '/Sonoran-Software/';
+  if (url.origin !== 'https://github.com' || url.search || url.hash || url.username || url.password) throw Error('Invalid download');
+  if (!url.pathname.startsWith(`${prefix}Sonoran-Desktop-Apps/releases/download/${product}-v`) && !legacy[product].some(repo => url.pathname.startsWith(`${prefix}${repo}/releases/download/`))) throw Error('Unexpected release');
+  return url.href;
+}
+fetch('https://raw.githubusercontent.com/Sonoran-Software/Sonoran-Desktop-Apps/master/catalog.json', {cache:'no-cache',signal:AbortSignal.timeout(10000)})
+  .then(response => { if (!response.ok) throw Error('Catalog unavailable'); return response.json(); })
+  .then(catalog => {
+    let destination;
+    for (const product of Object.keys(names).filter(product => !Object.hasOwn(names, app) || product === app)) {
+      for (const [os,label] of Object.entries(platforms)) {
+        const release = catalog[product]?.[os];
+        if (!release) continue;
+        const link = document.createElement('a');
+        link.href = safeUrl(release.url, product);
+        link.textContent = `${names[product]} — ${label} (${release.version})`;
+        const item = document.createElement('li'); item.append(link);
+        document.getElementById('downloads').append(item);
+        if (product === app && os === platform) destination = link.href;
+      }
+    }
+    status.textContent = destination ? 'Your download is starting. If it does not start, select it below.' : 'Choose a platform to download its latest available release.';
+    if (destination) location.replace(destination);
+  }).catch(() => { status.textContent = 'Downloads are temporarily unavailable here. Use the release list below.'; });
+</script>
+</html>

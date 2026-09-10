@@ -2,21 +2,21 @@
   "cad": {
     "windows": {
       "version": "3.43.31",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran%20CAD.exe",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran.CAD.exe",
       "central": true,
-      "metadataSha256": "21b5b61e4cd9ddfce199139943f18578eee4874e213e064ed53258d72253a8e6"
+      "metadataSha256": "59c82bc1aadb7594c9ceab9f8dd34aa98bc89f5270fdad4174d65b8a772d4c76"
     },
     "macos": {
       "version": "3.43.31",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran%20CAD-universal.dmg",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran.CAD-universal.dmg",
       "central": true,
-      "metadataSha256": "f5f6814e1aeb75fe466bddb5f58d6246ae961e6e9f8dfda84a4382147f9c5fd9"
+      "metadataSha256": "36d7126aae4838037b95cae5d7163a80246f954dd866ba63c2497f8b2324d151"
     },
     "linux": {
       "version": "3.43.31",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran%20CAD-3.43.31-x86_64.AppImage",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.31/Sonoran.CAD-3.43.31-x86_64.AppImage",
       "central": true,
-      "metadataSha256": "9bf30f1cec9fc344890715f799b2c68972bbdcdb61bf19bb9cac4290d9e1695f"
+      "metadataSha256": "ea1d2353b6975f361de66b313977e64b1c54231cef1525588ca92bcb84e0c31a"
     }
   },
   "cms": {
@@ -27,9 +27,9 @@
     },
     "macos": {
       "version": "1.5.18",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran%20CMS-universal.dmg",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.18/Sonoran.CMS-universal.dmg",
       "central": true,
-      "metadataSha256": "d0b9a3126c488941e64a4d6f84df97ed78a48da8f26872cc3bcc1ef86de541f6"
+      "metadataSha256": "708a463010fcdc84eb213c558c6f568fa290e1016899ce66b03b6cfb6b53fa54"
     }
   },
   "radio": {
