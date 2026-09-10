@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linux download verification | Sonoran Software</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;max-width:900px;margin:3rem auto;padding:0 1.5rem;color:#182331}a{color:#175fa5}code,pre{background:#f1f4f8;overflow-wrap:anywhere}pre{padding:1rem;overflow:auto}li{margin:.6rem 0}</style>
+<h1>Verify your Linux download</h1>
+<p>Sonoran CAD, CMS, Radio and Studio use separate release signing keys. Download the AppImage, <code>latest-linux.yml</code>, <code>SHA256SUMS-linux</code> and <code>SHA256SUMS-linux.asc</code> from the same product version in <a href="https://github.com/Sonoran-Software/Sonoran-Desktop-Apps">Sonoran Desktop Apps</a>.</p>
+<h2>Public keys and primary fingerprints</h2>
+<ul>
+<li><a href="keys/sonoran-cad-linux-public.asc">CAD public key</a><br><code>7B432CB92EC2A7F24C9ACA6B081A1D0F144ED844</code></li>
+<li><a href="keys/sonoran-cms-linux-public.asc">CMS public key</a><br><code>0BFD9CE5E7E4CEBF199484C2925E943ECB82EB4D</code></li>
+<li><a href="keys/sonoran-radio-linux-public.asc">Radio public key</a><br><code>EEDBB2BF46AB503729BF782C25AC62AC6B3F2217</code></li>
+<li><a href="keys/sonoran-studio-linux-public.asc">Studio public key</a><br><code>A9725A28F312A484D503067D1FAD03A135DBAEB5</code></li>
+</ul>
+<p>The signing subkeys expire September 9, 2028 (UTC). <a href="keys/fingerprints.json">Full key and subkey fingerprints</a>.</p>
+<h2>Check the signature and files</h2>
+<p>Install GnuPG using your distribution's package manager. In the directory containing the downloaded files, use the matching product key. For CAD:</p>
+<pre>gpg --import sonoran-cad-linux-public.asc
+gpg --fingerprint 7B432CB92EC2A7F24C9ACA6B081A1D0F144ED844
+gpg --verify SHA256SUMS-linux.asc SHA256SUMS-linux
+sha256sum --check SHA256SUMS-linux</pre>
+<p>Compare the full primary fingerprint with this page. Proceed only if the signature is good and both checksum checks report <code>OK</code>. A warning that the imported key is not locally certified is separate from signature validity; verify the fingerprint instead of blindly trusting a downloaded key.</p>
+<p>These detached signatures support manual verification. The current AppImage automatic updater uses HTTPS and the manifest's SHA-512 checksums; it does not automatically enforce the detached GPG signatures.</p>
+<p><a href="https://github.com/Sonoran-Software/Sonoran-Desktop-Apps">Back to downloads</a></p>
+</html>

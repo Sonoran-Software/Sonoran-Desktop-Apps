@@ -1,0 +1,34 @@
+[
+  {
+    "product": "CAD",
+    "primaryFingerprint": "7B432CB92EC2A7F24C9ACA6B081A1D0F144ED844",
+    "signingFingerprint": "A68FD56D1215267B85D4E003B12C9DE7DCF8C6C3",
+    "signingExpiresUtc": "2028-09-09",
+    "verified": true,
+    "ciExportContainsPrimarySecret": false
+  },
+  {
+    "product": "CMS",
+    "primaryFingerprint": "0BFD9CE5E7E4CEBF199484C2925E943ECB82EB4D",
+    "signingFingerprint": "7B50F7ED2D6CFECCEE75973089894646D4D995B1",
+    "signingExpiresUtc": "2028-09-09",
+    "verified": true,
+    "ciExportContainsPrimarySecret": false
+  },
+  {
+    "product": "Radio",
+    "primaryFingerprint": "EEDBB2BF46AB503729BF782C25AC62AC6B3F2217",
+    "signingFingerprint": "F5B8B47E0FA02671BC350DBD505399F2561AAA4D",
+    "signingExpiresUtc": "2028-09-09",
+    "verified": true,
+    "ciExportContainsPrimarySecret": false
+  },
+  {
+    "product": "Studio",
+    "primaryFingerprint": "A9725A28F312A484D503067D1FAD03A135DBAEB5",
+    "signingFingerprint": "0AD1D95550F0EA7E5F10CA9C027262B07EA2FF98",
+    "signingExpiresUtc": "2028-09-09",
+    "verified": true,
+    "ciExportContainsPrimarySecret": false
+  }
+]

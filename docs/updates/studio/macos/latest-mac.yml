@@ -1,0 +1,11 @@
+version: 0.1.104
+files:
+  - url: https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-macOS.zip
+    sha512: pT86oPq9+Q/2ZZp1BrBBROOEGu14VEHM3s8qjfV5GSGN/6OiwJF0mWw8Oz7qSa+5BkGovlyqu/LiYjqu2q74xQ==
+    size: 217554878
+  - url: https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-macOS.dmg
+    sha512: 4jmsDOtiwJkf7airVd/kGoBZAIBHwxfOwE9cWgpNctdCj8u95Tz4aiA/pRadbTUfQLnIWlUGosjZs6qPOiBmAQ==
+    size: 218508001
+path: https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-macOS.zip
+sha512: pT86oPq9+Q/2ZZp1BrBBROOEGu14VEHM3s8qjfV5GSGN/6OiwJF0mWw8Oz7qSa+5BkGovlyqu/LiYjqu2q74xQ==
+releaseDate: '2026-09-08T21:59:34.033Z'

@@ -1,0 +1,11 @@
+version: 3.43.29
+files:
+  - url: https://github.com/Sonoran-Software/SonoranCAD_MacOS/releases/download/v3.43.29/Sonoran-CAD-universal.zip
+    sha512: /ZmJABPeqw2iL/SFbSOeK7Ok0ojNrXO3jdwWgLIl83CXdUIvb/qsdBRpUNwzhp9n7ndBj/QE3rrPZAyN2K78tw==
+    size: 456967301
+  - url: https://github.com/Sonoran-Software/SonoranCAD_MacOS/releases/download/v3.43.29/Sonoran-CAD-universal.dmg
+    sha512: iQjCdk/2mzYPtlOuB5uACE2ejI/LPHD1blgkS96Z0RdeigMCT6JXJ8deTfshWePg56uK0+xkpzXJ9US4+cVACw==
+    size: 472093403
+path: https://github.com/Sonoran-Software/SonoranCAD_MacOS/releases/download/v3.43.29/Sonoran-CAD-universal.zip
+sha512: /ZmJABPeqw2iL/SFbSOeK7Ok0ojNrXO3jdwWgLIl83CXdUIvb/qsdBRpUNwzhp9n7ndBj/QE3rrPZAyN2K78tw==
+releaseDate: '2026-09-10T00:20:00.524Z'

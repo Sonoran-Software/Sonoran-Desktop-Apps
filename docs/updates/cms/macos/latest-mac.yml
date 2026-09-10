@@ -1,0 +1,17 @@
+version: 1.5.16
+files:
+  - url: https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-arm64.zip
+    sha512: MVGICQZuoUT57yeNpjz3+zeKwxMimakenr0LP312+enskEkE7NqbBQT3ZQ5ONIDzup2WehSiDj9jv5RVJ8cNNQ==
+    size: 217620028
+  - url: https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-universal.zip
+    sha512: oOLjcwft8upPsO1yA0YW3mEFtL+ufeaftWIYk/NhV+H0yff73Sxb2SdK136rnSejK2dIDhhHm9Ok9gnUOVfLeg==
+    size: 298019259
+  - url: https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-arm64.dmg
+    sha512: CnZsOKg7lb21UoofW5bGr3IboFKBwXXjKLcxvs9K4RxluOn4nyjDAxD0ZO7/4mLpppiW2Wwd17E4RswoYylnSQ==
+    size: 225422829
+  - url: https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-universal.dmg
+    sha512: bMkNbk1yi8jpgwTX0v3y2p+/gQtZYkIc3ILKw4q9Ac8/H/MfUlPmRByhwxCUAI36UgZ/mgJww8FUsCguVGTehw==
+    size: 308265011
+path: https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-arm64.zip
+sha512: MVGICQZuoUT57yeNpjz3+zeKwxMimakenr0LP312+enskEkE7NqbBQT3ZQ5ONIDzup2WehSiDj9jv5RVJ8cNNQ==
+releaseDate: '2026-09-09T00:33:35.802Z'

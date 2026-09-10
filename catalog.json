@@ -1,0 +1,50 @@
+{
+  "cad": {
+    "windows": {
+      "version": "3.43.29",
+      "url": "https://github.com/Sonoran-Software/SonoranCAD_Windows/releases/download/v3.43.29/Sonoran-CAD.exe",
+      "central": false
+    },
+    "macos": {
+      "version": "3.43.29",
+      "url": "https://github.com/Sonoran-Software/SonoranCAD_MacOS/releases/download/v3.43.29/Sonoran-CAD-universal.dmg",
+      "central": false
+    }
+  },
+  "cms": {
+    "windows": {
+      "version": "1.5.16",
+      "url": "https://github.com/Sonoran-Software/SonoranCMS_Windows/releases/download/v1.5.16/Sonoran-CMS.exe",
+      "central": false
+    },
+    "macos": {
+      "version": "1.5.16",
+      "url": "https://github.com/Sonoran-Software/SonoranCMS_MacOS/releases/download/v1.5.16/Sonoran-CMS-universal.dmg",
+      "central": false
+    }
+  },
+  "radio": {
+    "windows": {
+      "version": "2.27.18",
+      "url": "https://github.com/Sonoran-Software/SonoranRadio_Windows/releases/download/v2.27.18/Sonoran-Radio_Setup.exe",
+      "central": false
+    },
+    "macos": {
+      "version": "2.27.17",
+      "url": "https://github.com/Sonoran-Software/SonoranRadio_MacOS/releases/download/v2.27.17/Sonoran-Radio-universal.dmg",
+      "central": false
+    }
+  },
+  "studio": {
+    "windows": {
+      "version": "0.1.104",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-Windows.exe",
+      "central": false
+    },
+    "macos": {
+      "version": "0.1.104",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-macOS.dmg",
+      "central": false
+    }
+  }
+}

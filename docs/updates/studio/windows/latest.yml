@@ -1,0 +1,8 @@
+version: 0.1.104
+files:
+  - url: https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-Windows.exe
+    sha512: FgAk2lW+bTea3u+hvLabwlbpPJzbNHGYP22jqFEZIfuTHmv3RuvqPL82s7ySqhNes1cI+IIVjVod5tbbIlCAAQ==
+    size: 98632752
+path: https://github.com/Sonoran-Software/Sonoran-Studio-Releases/releases/download/v0.1.104/Sonoran-Studio-Windows.exe
+sha512: FgAk2lW+bTea3u+hvLabwlbpPJzbNHGYP22jqFEZIfuTHmv3RuvqPL82s7ySqhNes1cI+IIVjVod5tbbIlCAAQ==
+releaseDate: '2026-09-08T21:56:02.702Z'
