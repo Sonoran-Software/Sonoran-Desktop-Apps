@@ -1,8 +1,8 @@
-version: 3.43.32
+version: 3.43.33
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.32/Sonoran.CAD.exe
-    sha512: e6CZVpdJ+I6GCaWdwvmNC2Byc8CDxDQDH7Xki9e2nK3ZZxvXOpf8S7FreTtJbPp3ofhheqRkdmiZegxJZR8o0Q==
-    size: 308127256
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.32/Sonoran.CAD.exe
-sha512: e6CZVpdJ+I6GCaWdwvmNC2Byc8CDxDQDH7Xki9e2nK3ZZxvXOpf8S7FreTtJbPp3ofhheqRkdmiZegxJZR8o0Q==
-releaseDate: '2026-09-12T19:21:07.706Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.33/Sonoran.CAD.exe
+    sha512: jGHjdI7SUA98arBz0iCOf8eaanjtn2cpZEX7Xh1tTA2RGKVgzLQt5hz2QbVhIa0L6uVxTjeUkpp+7ECG0TGyiA==
+    size: 309056208
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.33/Sonoran.CAD.exe
+sha512: jGHjdI7SUA98arBz0iCOf8eaanjtn2cpZEX7Xh1tTA2RGKVgzLQt5hz2QbVhIa0L6uVxTjeUkpp+7ECG0TGyiA==
+releaseDate: '2026-09-15T05:30:15.771Z'
