@@ -4,7 +4,7 @@ Download the latest desktop apps from Sonoran Software.
 
 ## Sonoran CAD
 
-- [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.33/Sonoran.CAD.exe) — 3.43.33
+- [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.0/Sonoran.CAD.exe) — 3.44.0
 - [macOS](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.0/Sonoran.CAD-universal.dmg) — 3.44.0
 - [Linux (AppImage, x64)](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.43.32/Sonoran.CAD-3.43.32-x86_64.AppImage) — 3.43.32
 
