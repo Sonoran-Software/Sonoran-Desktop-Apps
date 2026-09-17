@@ -21,10 +21,10 @@
   },
   "cms": {
     "windows": {
-      "version": "1.5.20",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.20/Sonoran.CMS.exe",
+      "version": "1.5.21",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.21/Sonoran.CMS.exe",
       "central": true,
-      "metadataSha256": "0abc95cdee92f313487bbbd7e11a7ee1af6749caa0c5f583034446fa5159be15"
+      "metadataSha256": "d0f5d245cee56963bdb6c2277edf0c5c82c29306b6bb8bf0f9f0e190ce0c16ec"
     },
     "macos": {
       "version": "1.5.20",
