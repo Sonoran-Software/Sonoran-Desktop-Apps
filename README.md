@@ -16,7 +16,7 @@ Download the latest desktop apps from Sonoran Software.
 
 ## Sonoran Radio
 
-- [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.0/Sonoran-Radio_Setup.exe) — 2.28.0
+- [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.3/Sonoran-Radio_Setup.exe) — 2.28.3
 - [macOS](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.0/Sonoran-Radio-universal.dmg) — 2.28.0
 - [Linux (AppImage, x64)](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.2/Sonoran.Radio-2.28.2-x86_64.AppImage) — 2.28.2
 
