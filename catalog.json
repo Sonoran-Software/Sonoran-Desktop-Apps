@@ -41,10 +41,10 @@
   },
   "radio": {
     "windows": {
-      "version": "2.28.4",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.4/Sonoran-Radio_Setup.exe",
+      "version": "2.28.5",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.5/Sonoran-Radio_Setup.exe",
       "central": true,
-      "metadataSha256": "db38812cfd70c4f0ad346babe16ba847d2b335ca9a0cec5dadcb212d2d0dbb9c"
+      "metadataSha256": "7b67bd7bc6e39b170156d1ad8b8c4d0886e0f74e509abb228aad14e038ffdcc7"
     },
     "macos": {
       "version": "2.28.4",
