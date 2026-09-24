@@ -1,11 +1,11 @@
-version: 3.44.4
+version: 3.44.5
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.4/Sonoran.CAD-universal.zip
-    sha512: ThQvwGB5LhCkIUKbCMQ27RsXj+3w3ODoswEjNXiJE4sRSrr4j7PFcK2b4yBVcePSp6f3cToW3k5+XXW6rIMQdQ==
-    size: 458475149
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.4/Sonoran.CAD-universal.dmg
-    sha512: 5slhwOCxH9XDBUfW5cn5CW28qprd9u9LT7n2m3FurK4gmC4nWJNSyWZks5njIq7+9ACBAgthZgDPZcyr0eLBWQ==
-    size: 473640631
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.4/Sonoran.CAD-universal.zip
-sha512: ThQvwGB5LhCkIUKbCMQ27RsXj+3w3ODoswEjNXiJE4sRSrr4j7PFcK2b4yBVcePSp6f3cToW3k5+XXW6rIMQdQ==
-releaseDate: '2026-09-22T01:28:30.081Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.5/Sonoran.CAD-universal.zip
+    sha512: qWlPwse3cRE65JtvUiSEEVYkotyciWrvGYONJkkBi3rX3V57FMdxSlKI4iUuw6YcQG6XdfooQ7Eb3bWskglfqw==
+    size: 463390825
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.5/Sonoran.CAD-universal.dmg
+    sha512: uxdZ6yeDmq0A/W5kqDJs3nZrPfs/+c12cPGJ0hzI58BipZMKyjZ9LDhcYEHRril+q81b9fNSAGM9ODGbO8muhw==
+    size: 478516604
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.5/Sonoran.CAD-universal.zip
+sha512: qWlPwse3cRE65JtvUiSEEVYkotyciWrvGYONJkkBi3rX3V57FMdxSlKI4iUuw6YcQG6XdfooQ7Eb3bWskglfqw==
+releaseDate: '2026-09-24T23:47:45.772Z'
