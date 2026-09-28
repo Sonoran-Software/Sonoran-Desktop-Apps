@@ -61,10 +61,10 @@
   },
   "studio": {
     "windows": {
-      "version": "0.1.106",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-Windows.exe",
+      "version": "0.1.107",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.107/Sonoran-Studio-Windows.exe",
       "central": true,
-      "metadataSha256": "f92a6f7152897e03e97dd1b7c3cc55d12c83bfd7d85e40b489de10c128c2c459"
+      "metadataSha256": "914d0dd0b7845bd456efa183fb9af463774444a07b3dd89d7fbcff2f075adf32"
     },
     "macos": {
       "version": "0.1.106",
