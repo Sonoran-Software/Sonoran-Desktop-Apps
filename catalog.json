@@ -7,10 +7,10 @@
       "metadataSha256": "fc9c0f64682abfde80569e6b92c30fb04d099e3fafbd6d903268b032fede1238"
     },
     "macos": {
-      "version": "3.44.11",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.11/Sonoran.CAD-universal.dmg",
+      "version": "3.44.12",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.12/Sonoran.CAD-universal.dmg",
       "central": true,
-      "metadataSha256": "cf9638222221ef4ca533cc54cbb3527a64c09b58d2554ff50164ae2903f561e0"
+      "metadataSha256": "4fe0f68c07909d26b4948a38c1334b2b192c6387e6a2383e1bc95513c2789db4"
     },
     "linux": {
       "version": "3.44.11",
