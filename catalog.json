@@ -33,10 +33,10 @@
       "metadataSha256": "c6164acd4926096ec234921b364db3ee073249b483c84b8e5964d81148b40420"
     },
     "linux": {
-      "version": "1.5.21",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.21/Sonoran.CMS-1.5.21-x86_64.AppImage",
+      "version": "1.5.22",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.22/Sonoran.CMS-1.5.22-x86_64.AppImage",
       "central": true,
-      "metadataSha256": "90b5ca4c73e355b8d2827e5cad17effd2d55733dbf4f038e0acac61b89f0200f"
+      "metadataSha256": "9d1641609d706996db484f2310e969ccb0d709b9c9193b8768ebbc007814939a"
     }
   },
   "radio": {
