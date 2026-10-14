@@ -11,7 +11,7 @@ Download the latest desktop apps from Sonoran Software.
 ## Sonoran CMS
 
 - [Windows](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.24/Sonoran.CMS.exe) — 1.5.24
-- [macOS](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.23/Sonoran.CMS-universal.dmg) — 1.5.23
+- [macOS](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.24/Sonoran.CMS-universal.dmg) — 1.5.24
 - [Linux (AppImage, x64)](https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.24/Sonoran.CMS-1.5.24-x86_64.AppImage) — 1.5.24
 
 ## Sonoran Radio
