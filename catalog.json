@@ -47,10 +47,10 @@
       "metadataSha256": "94a373f46ab782977cb1d41bbefaf9ffe0ff7f8e0cf7395fae715e1b6770cff9"
     },
     "macos": {
-      "version": "2.28.9",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.9/Sonoran-Radio-universal.dmg",
+      "version": "2.28.11",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.11/Sonoran-Radio-universal.dmg",
       "central": true,
-      "metadataSha256": "f168bbbf2885b135386ce74dc13cc397606e482a4a307a29cc2aac84a8468809"
+      "metadataSha256": "de56aa1873e743fbf4f7a4a197774db6af33d57305c601b8a62420610e4f4943"
     },
     "linux": {
       "version": "2.28.11",
