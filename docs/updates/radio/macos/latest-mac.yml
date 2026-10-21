@@ -1,17 +1,17 @@
-version: 2.28.11
+version: 2.28.12
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.11/Sonoran-Radio-arm64.zip
-    sha512: B53sxsuiOkgkjoTdFOAYbR1Q2w8OwLSfWifDBiTLco5B9WU49uTEzwuEn5DIWqTQ+HKzCrbnEoYJ7yapUQV9eQ==
-    size: 341854449
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.11/Sonoran-Radio-universal.zip
-    sha512: ISFsWguziZjxl+jLZxHmTD5HvViMAuXfXBzHnemUYR/PhMBe6rFBpfwieQkKs6Wd+BB+SjkdBhew4SNn6Sr7kw==
-    size: 432279924
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.11/Sonoran-Radio-arm64.dmg
-    sha512: pbXw+rSxogHTRQnGVb9w6cTMGMoHvixr4Iro24QRGsUBw6kp9g05uOIRo8+48lTPgABUaOVmmt6StSTWbMKfEg==
-    size: 342823429
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.11/Sonoran-Radio-universal.dmg
-    sha512: BudlXsC1HtfPkbQAvYQobC7LjMDNVZrrn60YJJKTKfDrpP/RNR9Zn33qdNNRRqyRo+Bz7qNwIwHClpBrTNrJag==
-    size: 433327807
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.11/Sonoran-Radio-arm64.zip
-sha512: B53sxsuiOkgkjoTdFOAYbR1Q2w8OwLSfWifDBiTLco5B9WU49uTEzwuEn5DIWqTQ+HKzCrbnEoYJ7yapUQV9eQ==
-releaseDate: '2026-10-14T22:10:21.351Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.12/Sonoran-Radio-arm64.zip
+    sha512: TkM9JEBRK0IfplmDIWa+0tE7OMc5vrV6zpBOkNTCNSpjwq9HZR65GklMQ4Vsat7RWo8bYH+TFxAtzujf9tQFzQ==
+    size: 342696052
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.12/Sonoran-Radio-universal.zip
+    sha512: tRffNdamNdApKSSVjxuQ5Ve3BtFAJuoW90wdXTub/OTFCOWTG1ZTDDivVu/RAfUe1q15wvYuaxDtS4b4GYq2mA==
+    size: 433109869
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.12/Sonoran-Radio-arm64.dmg
+    sha512: nyjWbYlAQxu9pN4EOzn/qBKkb2tqV3ifzxSyFi+29GmhLL+q+aiAwTWlOr8Ptj9nUj8ZqKDTASfE9PojSDEKNw==
+    size: 343676273
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.12/Sonoran-Radio-universal.dmg
+    sha512: +YsM9tPwfIrk0a7tTv2bSzRqGEcMlK6O0hrjkeN5kfBcZ47W4v5yINtm7nVLcNmH9iFwH5+XLtOqC0ZUMY3I/g==
+    size: 434124791
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/radio-v2.28.12/Sonoran-Radio-arm64.zip
+sha512: TkM9JEBRK0IfplmDIWa+0tE7OMc5vrV6zpBOkNTCNSpjwq9HZR65GklMQ4Vsat7RWo8bYH+TFxAtzujf9tQFzQ==
+releaseDate: '2026-10-21T23:21:57.549Z'
