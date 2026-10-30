@@ -1,9 +1,9 @@
-version: 0.1.109
+version: 0.1.110
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.109/Sonoran-Studio-0.1.109-x86_64.AppImage
-    sha512: lh2E/cXrv7yathyIeZKt3dcruTvHFHOn2qEXje11ZpI4d9K7SRag7qyPek4UUVTuK2LlHfSVhsnMwDU6fm7OTw==
-    size: 125928139
-    blockMapSize: 131807
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.109/Sonoran-Studio-0.1.109-x86_64.AppImage
-sha512: lh2E/cXrv7yathyIeZKt3dcruTvHFHOn2qEXje11ZpI4d9K7SRag7qyPek4UUVTuK2LlHfSVhsnMwDU6fm7OTw==
-releaseDate: '2026-10-28T21:40:55.258Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-0.1.110-x86_64.AppImage
+    sha512: 8VijcTWa2dSHHsYX+/FE7s1WYtde8OYEIj0J/z0TQT2VwCYT/RcVXMGZa+7sg7Hd4TctxVL0gjB++JN2j140yQ==
+    size: 125928138
+    blockMapSize: 131806
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-0.1.110-x86_64.AppImage
+sha512: 8VijcTWa2dSHHsYX+/FE7s1WYtde8OYEIj0J/z0TQT2VwCYT/RcVXMGZa+7sg7Hd4TctxVL0gjB++JN2j140yQ==
+releaseDate: '2026-10-30T20:58:39.694Z'
