@@ -1,11 +1,11 @@
-version: 0.1.106
+version: 0.1.110
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-macOS.zip
-    sha512: 6KUSbk6ZR1TPknOZ6lnFfNokBkAdViXyYUAs+xWAY7OeaZBsObe4UGwmd+UnBaEwbr4p+nmvm9yvDRBC9UEwvw==
-    size: 217554771
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-macOS.dmg
-    sha512: 639YYr1Kv+pHF5F24yAp/ovZOGbLroDPar9wVBkM3Xp/B98EFlCaiE7pJkKPi4aD0aSChBLxbf+1SGDVj0S2qA==
-    size: 218463603
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.106/Sonoran-Studio-macOS.zip
-sha512: 6KUSbk6ZR1TPknOZ6lnFfNokBkAdViXyYUAs+xWAY7OeaZBsObe4UGwmd+UnBaEwbr4p+nmvm9yvDRBC9UEwvw==
-releaseDate: '2026-09-10T20:54:32.407Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-macOS.zip
+    sha512: 6mRFwTu+rECFJtz5a76TjlhGj3I4W4UKAi+IMBbC0BKSpcG66gxnAmnZWugvHQSbv/YLWvIAeMJeVPv+XGDXGw==
+    size: 217554908
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-macOS.dmg
+    sha512: R4qxGX7TmBidxUTViz/RrMjpQ0dzz4awt6w+F87niRDEwAZ8wDyqFN8rJ5qqg+uGErgYTyKPZO77xGV4kGFE8w==
+    size: 218513008
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-macOS.zip
+sha512: 6mRFwTu+rECFJtz5a76TjlhGj3I4W4UKAi+IMBbC0BKSpcG66gxnAmnZWugvHQSbv/YLWvIAeMJeVPv+XGDXGw==
+releaseDate: '2026-10-30T20:55:25.038Z'
