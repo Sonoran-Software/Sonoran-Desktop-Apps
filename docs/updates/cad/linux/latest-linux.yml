@@ -1,9 +1,9 @@
-version: 3.44.20
+version: 3.44.21
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.20/Sonoran.CAD-3.44.20-x86_64.AppImage
-    sha512: uWANqqJEb21TuvjDyDfnMYdRzTXI/NJkFKE8gGqbVydFA5V1J6+81qaf8avce7I2T9Nl8yd29ksH8u7ECZgNwg==
-    size: 407626273
-    blockMapSize: 422453
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.20/Sonoran.CAD-3.44.20-x86_64.AppImage
-sha512: uWANqqJEb21TuvjDyDfnMYdRzTXI/NJkFKE8gGqbVydFA5V1J6+81qaf8avce7I2T9Nl8yd29ksH8u7ECZgNwg==
-releaseDate: '2026-10-31T01:21:15.498Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.21/Sonoran.CAD-3.44.21-x86_64.AppImage
+    sha512: 2QdtNOcPTJJk0Eyuc2eEZVKmaxtrrnQ+kjDc1jObJCHN4HnV3x39JsIftL76bHx9jGZc4QyxvGktzAzF0xTNPg==
+    size: 407699253
+    blockMapSize: 421705
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.44.21/Sonoran.CAD-3.44.21-x86_64.AppImage
+sha512: 2QdtNOcPTJJk0Eyuc2eEZVKmaxtrrnQ+kjDc1jObJCHN4HnV3x39JsIftL76bHx9jGZc4QyxvGktzAzF0xTNPg==
+releaseDate: '2026-11-05T19:43:36.650Z'
