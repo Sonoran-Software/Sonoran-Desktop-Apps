@@ -27,10 +27,10 @@
       "metadataSha256": "5226c7490af26e960b44d0787237841823169395c6f20b4c13c83dfa4fd4b07a"
     },
     "macos": {
-      "version": "1.5.24",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.24/Sonoran.CMS-universal.dmg",
+      "version": "1.5.25",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cms-v1.5.25/Sonoran.CMS-universal.dmg",
       "central": true,
-      "metadataSha256": "1a1267b1be25b542d9f53ad850ef9978b6dad0536c9c9afa0f9e38e13b78b75f"
+      "metadataSha256": "e13e4c9a22e2e615ec7e8af05ea70fd9c94cbdec251628da2b9aa95b3b59e92b"
     },
     "linux": {
       "version": "1.5.25",
