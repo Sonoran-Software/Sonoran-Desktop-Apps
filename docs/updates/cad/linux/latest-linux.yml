@@ -1,9 +1,9 @@
-version: 3.46.2
+version: 3.46.3
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.2/Sonoran.CAD-3.46.2-x86_64.AppImage
-    sha512: LjhyQVAUy0hrxYQ2GZJ2pUvxVLeCeDAXXSEBUBI9dslCJsthkgqV0Z679su4l2W5SuwrNWF84ffUX2GWwDoQYg==
-    size: 408838664
-    blockMapSize: 422428
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.2/Sonoran.CAD-3.46.2-x86_64.AppImage
-sha512: LjhyQVAUy0hrxYQ2GZJ2pUvxVLeCeDAXXSEBUBI9dslCJsthkgqV0Z679su4l2W5SuwrNWF84ffUX2GWwDoQYg==
-releaseDate: '2026-11-14T22:28:03.473Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.3/Sonoran.CAD-3.46.3-x86_64.AppImage
+    sha512: fgTl9UDlOhpX7ktG1qGoAdCjW789nwLIwBworbpXbJNKSBoOiokNFj6yAXpc0FXIDkblzN/FTYcvO0K5fR2orQ==
+    size: 409105777
+    blockMapSize: 423301
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.3/Sonoran.CAD-3.46.3-x86_64.AppImage
+sha512: fgTl9UDlOhpX7ktG1qGoAdCjW789nwLIwBworbpXbJNKSBoOiokNFj6yAXpc0FXIDkblzN/FTYcvO0K5fR2orQ==
+releaseDate: '2026-11-15T23:20:16.595Z'
