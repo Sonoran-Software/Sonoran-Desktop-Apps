@@ -1,10 +1,10 @@
 {
   "cad": {
     "windows": {
-      "version": "3.46.2",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.2/Sonoran.CAD.exe",
+      "version": "3.46.3",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.3/Sonoran.CAD.exe",
       "central": true,
-      "metadataSha256": "a4a68499e1456eac51327a31fe65f1b831bc85ca9cec69d0f3fbe5cd5e30b65b"
+      "metadataSha256": "5d7e2f702cce8b17b3367da3d01b028de808838cb6bc3db745cf43dcedb473bf"
     },
     "macos": {
       "version": "3.46.2",
