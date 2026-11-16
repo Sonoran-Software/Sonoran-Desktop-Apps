@@ -13,10 +13,10 @@
       "metadataSha256": "bd77c8bdac318fe458879f57cae45847f56fef8b5e6b3c2880ea02729822934f"
     },
     "linux": {
-      "version": "3.46.4",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.4/Sonoran.CAD-3.46.4-x86_64.AppImage",
+      "version": "3.46.5",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/cad-v3.46.5/Sonoran.CAD-3.46.5-x86_64.AppImage",
       "central": true,
-      "metadataSha256": "5644491bc4e7da4a19f79fcf1284bc6431b23f922af345d2129e0e82dd78d264"
+      "metadataSha256": "f726bef8e895d05b7e0b9195b37826bdb195965775897c141b952df3406ee382"
     }
   },
   "cms": {
