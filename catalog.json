@@ -67,10 +67,10 @@
       "metadataSha256": "ed2faab331dc6557af4ef0e0ab8dabecee1807046e296be5d32f8c351362489b"
     },
     "macos": {
-      "version": "0.1.110",
-      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-macOS.dmg",
+      "version": "0.1.111",
+      "url": "https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.111/Sonoran-Studio-macOS.dmg",
       "central": true,
-      "metadataSha256": "52fba9e2980e0fa3a968b74496580241c196a354b8ade8fa5ef72a46b069e80c"
+      "metadataSha256": "72750d0768126ca17b24a794c3b99be4e7ec87a651612602528560f66c55fd42"
     },
     "linux": {
       "version": "0.1.110",
