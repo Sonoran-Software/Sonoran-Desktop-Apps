@@ -1,8 +1,8 @@
-version: 0.1.110
+version: 0.1.112
 files:
-  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-Windows.exe
-    sha512: WGDYMSLIAzRgx7yXfBr9L8+Oe0ODcQClPkpHSxUVsdOwYGs2X2hFTtdQPshs9Y44eBuQJhIFU9eiE89YJ2RnZQ==
-    size: 98632696
-path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.110/Sonoran-Studio-Windows.exe
-sha512: WGDYMSLIAzRgx7yXfBr9L8+Oe0ODcQClPkpHSxUVsdOwYGs2X2hFTtdQPshs9Y44eBuQJhIFU9eiE89YJ2RnZQ==
-releaseDate: '2026-10-30T21:04:39.166Z'
+  - url: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.112/Sonoran-Studio-Windows.exe
+    sha512: /sfSHF3Fy/sskBYz+ZMXnEtIWDZpCEp14UhgTYvx5kNgnBLdc7qxB6MA+z32i0tQYIEJ1kxP5RGLFX3xGY6c0g==
+    size: 98632872
+path: https://github.com/Sonoran-Software/Sonoran-Desktop-Apps/releases/download/studio-v0.1.112/Sonoran-Studio-Windows.exe
+sha512: /sfSHF3Fy/sskBYz+ZMXnEtIWDZpCEp14UhgTYvx5kNgnBLdc7qxB6MA+z32i0tQYIEJ1kxP5RGLFX3xGY6c0g==
+releaseDate: '2026-11-19T12:40:18.617Z'
